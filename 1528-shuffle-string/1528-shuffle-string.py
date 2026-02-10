@@ -8,8 +8,7 @@ class Solution:
         for index,char in enumerate(s):
             indice = indices[index]
             shuffled[indice] = char
-        
-        for char in shuffled:
-            str_shuffled=str_shuffled + char
 
-        return str_shuffled
+        shuffled = "".join(shuffled)
+        
+        return shuffled
