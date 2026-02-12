@@ -1,8 +1,13 @@
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        count=Counter(nums)
-        arr=[]
-        for k,v in count.items():
-            if v == 2:
-                arr.append(k)
-        return arr
+        hashh={}
+        ans=[]
+        for i in nums:
+            if i not in hashh:
+                hashh[i]=1
+            else:
+                hashh[i]+=1
+        for key,values in hashh.items():
+            if values ==2:
+                ans.append(key)
+        return ans
