@@ -12,7 +12,7 @@ class Solution:
             k = len(nums) -1
             while j < k:
                 t = nums[i] +nums[j] + nums[k]
-                if nums[i] +nums[j] + nums[k] == 0:
+                if t == 0 :
                     ans.add((nums[i],nums[j],nums[k]))
                     j += 1
                     k -= 1
